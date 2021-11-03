@@ -1,0 +1,85 @@
+body {
+  background: linear-gradient(
+    109.6deg,
+    rgb(17, 151, 147) 11.2%,
+    rgb(154, 214, 212) 55.4%,
+    rgb(255, 233, 171) 100.2%
+  );
+  opacity: 90%;
+  font-family: monospace;
+}
+
+.Days {
+  background: linear-gradient(
+    112.5deg,
+    rgb(95, 10, 135) 11.4%,
+    rgb(164, 80, 139) 60.2%
+  );
+  border-spacing: 10mm;
+  border-color: black;
+  border-style: line;
+  border-radius: 100mm;
+  color: rgb(201, 173, 221);
+  line-height: 10mm;
+  text-align: center;
+  font-size: 12pt;
+  height: calc(1.5 em + 0.75 rem + 2 px);
+  margin-top: 1rem;
+}
+
+.container {
+  margin-top: 1rem;
+}
+
+.temperature {
+  font-size: 28pt;
+}
+
+.btn {
+  background: linear-gradient(
+    112.5deg,
+    rgb(95, 10, 135) 11.4%,
+    rgb(164, 80, 139) 60.2%
+  );
+  border-color: black;
+  box-shadow: black;
+}
+
+.currentbtn {
+  margin-top: 1rem;
+  width: 80%;
+  color: ivory;
+  background: linear-gradient(
+    112.5deg,
+    rgb(95, 10, 135) 11.4%,
+    rgb(164, 80, 139) 60.2%
+  );
+  border-color: black;
+  box-shadow: black;
+}
+
+.btn:hover {
+  background: rgb(164, 80, 139);
+  cursor: grabbing;
+  border-color: rgb(164, 80, 139);
+}
+
+.currentbtn:hover {
+  background: rgb(164, 80, 139);
+  cursor: grabbing;
+  border-color: rgb(164, 80, 139);
+}
+
+h2 {
+  font-size: 20pt;
+  color: black;
+}
+
+.float-left {
+  background-color: cornsilk;
+  margin-top: 1rem;
+  border-radius: 5mm;
+  width: 80%;
+  height: calc(1.5 em + 0.75 rem + 2 px);
+  padding-top: 1rem;
+}
