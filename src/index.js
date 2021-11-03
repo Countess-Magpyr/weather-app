@@ -25,6 +25,10 @@ function formatDate(date) {
   return "".concat(day, " ").concat(hours, ":").concat(minutes);
 }
 
+let h2 = document.querySelector("h2");
+let currentTime = new Date();
+h2.innerHTML = formatDate(currentTime);
+
 //Get results from city search
 
 function displayWeatherCondition(response) {
@@ -66,10 +70,6 @@ function search(event) {
 // var temperatureElement = document.querySelector("#temperature");
 // temperatureElement.innerHTML = 25;
 //}
-
-let h2 = document.querySelector("h2");
-let currentTime = new Date();
-h2.innerHTML = formatDate(currentTime);
 
 var searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
