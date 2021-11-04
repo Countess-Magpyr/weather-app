@@ -28,6 +28,7 @@ function formatDate(date) {
 let timeElement = document.querySelector("timeElement");
 let currentTime = new Date();
 timeElement.innerHTML = formatDate(currentTime);
+console.log(currentTime);
 
 //Get results from city search
 
