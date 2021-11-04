@@ -16,9 +16,6 @@ body {
     rgb(164, 80, 139) 60.2%
   );
   border-spacing: 10mm;
-  border-color: black;
-  border-style: line;
-  border-radius: 100mm;
   color: rgb(201, 173, 221);
   line-height: 10mm;
   text-align: center;
@@ -41,8 +38,6 @@ body {
     rgb(95, 10, 135) 11.4%,
     rgb(164, 80, 139) 60.2%
   );
-  border-color: black;
-  box-shadow: black;
 }
 
 .currentbtn {
@@ -70,7 +65,17 @@ body {
   border-color: rgb(164, 80, 139);
 }
 
+h1 {
+  font-size: 20pt;
+  color: black;
+}
+
 h2 {
+  font-size: 20pt;
+  color: black;
+}
+
+.temperature {
   font-size: 20pt;
   color: black;
 }
