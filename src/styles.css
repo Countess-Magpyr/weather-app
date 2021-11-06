@@ -9,6 +9,12 @@ body {
   font-family: monospace;
 }
 
+.daysContainer {
+  display: block;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
 .Days {
   background: linear-gradient(
     112.5deg,
@@ -21,7 +27,6 @@ body {
   text-align: center;
   font-size: 12pt;
   height: calc(1.5 em + 0.75 rem + 2 px);
-  margin-top: 1rem;
 }
 
 .container {
@@ -38,9 +43,15 @@ body {
     rgb(95, 10, 135) 11.4%,
     rgb(164, 80, 139) 60.2%
   );
+
+  border-color: rgb(69, 73, 83);
+  box-shadow: black;
+  border: 1px;
 }
 
 .currentbtn {
+  display: block;
+  margin: 0 auto;
   margin-top: 1rem;
   width: 80%;
   color: ivory;
@@ -49,8 +60,9 @@ body {
     rgb(95, 10, 135) 11.4%,
     rgb(164, 80, 139) 60.2%
   );
-  border-color: black;
+  border-color: rgb(69, 73, 83);
   box-shadow: black;
+  border: 1px;
 }
 
 .btn:hover {
@@ -66,23 +78,38 @@ body {
 }
 
 h1 {
-  font-size: 20pt;
+  font-size: 24pt;
   color: black;
+  text-align: left;
+  display: block;
+  font-weight: 100;
+  padding-left: 20px;
 }
 
 h2 {
   font-size: 20pt;
   color: black;
+  text-align: left;
+  display: block;
+  padding-left: 20px;
+}
+
+ul {
+  font-size: 14pt;
+  color: black;
+  text-align: left;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style: none;
 }
 
 .temperature {
-  font-size: 20pt;
-  color: black;
-}
-
-.float-right {
   display: inline;
-  margin-right: 0cm;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 24pt;
+  color: black;
 }
 
 .currentWeatherbox {
@@ -102,4 +129,9 @@ h2 {
 .weather-app {
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  margin: 30px auto;
+  border-color: rgb(69, 73, 83);
+  border-radius: 10px;
+  border: 1px;
 }
