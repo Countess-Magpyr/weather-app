@@ -25,10 +25,9 @@ function formatDate(date) {
   return "".concat(day, " ").concat(hours, ":").concat(minutes);
 }
 
-let timeElement = document.querySelector("timeElement");
+let timeElement = document.querySelector("#timeNow");
 let currentTime = new Date();
 timeElement.innerHTML = formatDate(currentTime);
-console.log(currentTime);
 
 //Get results from city search
 
@@ -55,7 +54,7 @@ function search(event) {
     "&appid=" +
     apiKey +
     "&units=metric";
-  console.log(apiUrl);
+  console.log(city);
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 

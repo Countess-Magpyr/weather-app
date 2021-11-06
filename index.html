@@ -23,7 +23,6 @@
 
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="src/index.js"></script>
   </head>
 
   <body>
@@ -55,7 +54,7 @@
         <div class="currentWeatherbox">
           <h1 id="currentCity">Düsseldorf</h1>
           <ul>
-            <li><timeElement>Friday, 12:00</timeElement></li>
+            <li id="timeNow">Friday, 12:00</li>
             <li><descriptionElement>Clear</descriptionElement></li>
           </ul>
 
@@ -77,9 +76,9 @@
 
             <div class="col-5">
               <ul>
-                <li>Percipitation</li>
-                <li>Humidity</li>
-                <li>Wind speed</li>
+                <li id="percipitation">Percipitation</li>
+                <li id="humidity">Humidity</li>
+                <li id="wind speed">Wind speed</li>
               </ul>
             </div>
           </div>
@@ -124,7 +123,6 @@
             </div>
           </div>
         </div>
-
         <footer>
           <a
             href="https://github.com/Countess-Magpyr/weather-app"
@@ -137,4 +135,5 @@
       </div>
     </div>
   </body>
+  <script src="src/index.js"></script>
 </html>

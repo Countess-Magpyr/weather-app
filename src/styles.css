@@ -27,6 +27,7 @@ body {
   text-align: center;
   font-size: 12pt;
   height: calc(1.5 em + 0.75 rem + 2 px);
+  border-radius: 10px;
 }
 
 .container {
@@ -69,6 +70,7 @@ body {
   background: rgb(164, 80, 139);
   cursor: grabbing;
   border-color: rgb(164, 80, 139);
+  border-radius: 10px;
 }
 
 .currentbtn:hover {
@@ -78,6 +80,7 @@ body {
 }
 
 h1 {
+  text-transform: capitalize;
   font-size: 24pt;
   color: black;
   text-align: left;
@@ -102,6 +105,10 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   list-style: none;
+}
+
+li {
+  text-transform: capitalize;
 }
 
 .temperature {
