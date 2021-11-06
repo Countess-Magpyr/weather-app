@@ -42,6 +42,7 @@ function displayWeatherCondition(response) {
   let currentCity = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = currentCity;
+  console.log(currentCity);
 }
 
 function search(event) {
