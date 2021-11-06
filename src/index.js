@@ -28,20 +28,20 @@ function formatDate(date) {
 let timeElement = document.querySelector("#timeNow");
 let currentTime = new Date();
 timeElement.innerHTML = formatDate(currentTime);
-
+//////////////////////////////////////////////////////////////////////////////////
 //Get results from city search
+//////////////////////////////////////////////////////////////////////////////////
 
 function displayWeatherCondition(response) {
-  let temp = Math.round(response.data.main.temp);
+  let celsiusTemp = response.data.main.temp;
   let temperatureElement = document.querySelector("temperatureElement");
-  temperatureElement.innerHTML = temp;
+  temperatureElement.innerHTML = celsiusTemp;
   let description = response.data.weather[0].description;
   let descriptionElement = document.querySelector("descriptionElement");
   descriptionElement.innerHTML = description;
   let currentCity = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = currentCity;
-  console.log(currentCity);
   let windVar = response.data.wind.speed;
   let windElement = document.querySelector("windElement");
   windElement.innerHTML = windVar;
@@ -70,60 +70,32 @@ function search(event) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-//forecast
-
-// current location
-
-function showTemperature(response) {
-  let temp = Math.round(response.data.main.temp);
-  let temperatureElement = document.querySelector("temperatureElement");
-  temperatureElement.innerHTML = temp;
-  let description = response.data.weather[0].description;
-  let descriptionElement = document.querySelector("descriptionElement");
-  descriptionElement.innerHTML = description;
-  let currentCity = response.data.name;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = currentCity;
-  console.log(currentCity);
-  let windVar = response.data.wind.speed;
-  let windElement = document.querySelector("windElement");
-  windElement.innerHTML = windVar;
-  let humidityVar = response.data.main.humidity;
-  let humidityElement = document.querySelector("humidityElement");
-  humidityElement.innerHTML = humidityVar;
-  let iconElement = document.querySelector("#icon");
-  let weatherIcon = response.data.weather[0].icon;
-  iconElement.setAttribute(
-    "src",
-    "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png"
-  );
-}
-
-// get current location
-
-function searchLocation(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = "24938515d6364eea8b6bfd1202de9eb1";
-  let apiUrl2 =
-    "https://api.openweathermap.org/data/2.5/weather?lat=" +
-    latitude +
-    "&lon=" +
-    longitude +
-    "&appid=" +
-    apiKey +
-    "&units=metric";
-  console.log(apiUrl2);
-  axios.get(apiUrl2).then(showTemperature);
-}
-
-function findPosition(event) {
+function showFahrenheitTemp(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  console.log(fahrenheitTemp);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
-let button = document.querySelector("button");
-button.addEventListener("click", findPosition);
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+//let button = document.querySelector("button");
+//button.addEventListener("click", findPosition);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+search("Berlin");
