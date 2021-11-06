@@ -80,7 +80,12 @@ h2 {
   color: black;
 }
 
-.float-left {
+.float-right {
+  display: inline;
+  margin-right: 0cm;
+}
+
+.currentWeatherbox {
   background-color: cornsilk;
   margin-top: 1rem;
   border-radius: 5mm;
@@ -92,4 +97,9 @@ h2 {
 .links {
   color: black;
   font-size: larger;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
 }

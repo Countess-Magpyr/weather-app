@@ -14,9 +14,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -24,87 +27,114 @@
   </head>
 
   <body>
-    
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Enter city"
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
 
-      <div class="container">
-          <div class="weather-app">
-            <form class="search-form" id="search-form">
-              <div class="row">
-                <div class="col-7">
-                  <input
-                    type="search"
-                    placeholder="Enter city"
-                    autofocus="on"
-                    autocomplete="off"
-                    id="city-input"
-                    class="form-control shadow-sm"
-                  />
-                </div>
-                <div class="col-3">
-                  <input
-                    type="submit"
-                    value="Search"
-                    class="form-control btn btn-primary shadow-sm"
-                  />
-              </div>
-            </form>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+        <br />
 
-          </br>
+        <div class="currentWeatherbox">
+          <h1 id="currentCity">Düsseldorf</h1>
+          <ul>
+            <li><timeElement>Friday, 12:00</timeElement></li>
+            <li><descriptionElement>Clear</descriptionElement></li>
+          </ul>
 
-   <div class="float-left">
-      <h1 id="currentCity">Düsseldorf</h1>   
-          <timeElement>Time</timeElement> 
- <span class="temperature" id="temperature"> <temperatureElement>13</temperatureElement></span><span class="units">
-°C <descriptionElement></descriptionElement>
-                  </span>
+          <div class="row">
+            <div class="col-6">
+              <img
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/sun-with-face_1f31e.png"
+                alt="Clear"
+                width="50"
+                px,
+                height="50"
+                px
+              />
 
-          </p>
-     
+              <span class="temperature" id="temperature">
+                <temperatureElement>13</temperatureElement></span
+              ><span class="units"> °C | °F </span>
+            </div>
+
+            <div class="col-5">
+              <ul>
+                <li>Percipitation</li>
+                <li>Humidity</li>
+                <li>Wind speed</li>
+              </ul>
+            </div>
+          </div>
+
+          <button class="currentbtn" id="currentUpdate">Current</button>
+
+          <div class="row">
+            <div class="col-2">
+              <p class="Days">
+                ⛅<br />22°C<br />
+                Mon
+              </p>
+            </div>
+            <div class="col-2">
+              <p class="Days">
+                ☀️<br />
+                20°C<br />
+                Tue
+              </p>
+            </div>
+            <div class="col-2">
+              <p class="Days">
+                ⛅ <br />15°C<br />
+
+                Wed
+              </p>
+            </div>
+            <div class="col-2">
+              <p class="Days">
+                🌧 <br />10°C<br />
+
+                Thu
+              </p>
+            </div>
+            <div class="col-2">
+              <p class="Days">
+                🌧 <br />15°C<br />
+
+                Fri
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <a
+            href="https://github.com/Countess-Magpyr/weather-app"
+            class="links"
+            target="_blank"
+          >
+            Find Code Here!</a
+          >
+        </footer>
       </div>
-
-      <button class="currentbtn" id="currentUpdate"> Current </button>
-
-    <div class="row">
-       <div class="col-2">
-          <p class="Days">
-            ⛅<br />22°C<br />
-            Mon
-          </p>
-        </div>
-        <div class="col-2">
-          <p class="Days">
-            ☀️<br /> 20°C<br />
-            Tue
-          </p>
-        </div>
-        <div class="col-2">
-          <p class="Days">
-            ⛅ <br />15°C<br />
-
-            Wed
-          </p>
-        </div>
-        <div class="col-2">
-          <p class="Days">
-            🌧 <br />10°C<br />
-
-            Thu
-          </p>
-        </div>
-        <div class="col-2">
-          <p class="Days">
-            🌧 <br />15°C<br />
-
-            Fri
-          </p>
-        </div>
-        <div class="col-2"></div>
-      </div>
-        </div>
-      </form>
     </div>
-    <footer> <a href="https://github.com/Countess-Magpyr/weather-app" class="links" target="_blank">
-  Find Code Here!</a></footer>
   </body>
- 
 </html>
