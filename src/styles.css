@@ -22,7 +22,7 @@ body {
     rgb(164, 80, 139) 60.2%
   );
   border-spacing: 10mm;
-  color: rgb(201, 173, 221);
+  color: cornsilk;
   line-height: 10mm;
   text-align: center;
   font-size: 12pt;
@@ -32,6 +32,9 @@ body {
 
 .container {
   margin-top: 1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: ;
 }
 
 .temperature {
@@ -127,12 +130,13 @@ li {
   width: 80%;
   height: calc(1.5 em + 0.75 rem + 2 px);
   padding-top: 1rem;
+  background-color: rgb(255, 247, 226);
 }
 
 footer {
   color: black;
-  font-size: 10pt;
-  width: 400px;
+  font-size: 8pt;
+  width: 450px;
 }
 
 .weather-app {
@@ -143,4 +147,12 @@ footer {
   border-color: rgb(69, 73, 83);
   border-radius: 10px;
   border: 1px;
+}
+
+.units {
+  font-size: 8pt;
+}
+
+img {
+  margin-left: 20px;
 }

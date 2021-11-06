@@ -49,9 +49,12 @@ function displayWeatherCondition(response) {
   let humidityVar = response.data.main.humidity;
   let humidityElement = document.querySelector("humidityElement");
   humidityElement.innerHTML = humidityVar;
-  // let rainVar = response.data.main.weather[0].icon;
-  // let percipitationElement = document.querySelector("#percipitation");
-  //percipitationElement.innerHTML = rainVar;
+  let iconElement = document.querySelector("#icon");
+  let weatherIcon = response.data.weather[0].icon;
+  iconElement.setAttribute(
+    "src",
+    "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png"
+  );
 }
 
 function search(event) {
@@ -108,6 +111,12 @@ function showTemperature(response) {
   let humidityVar = response.data.main.humidity;
   let humidityElement = document.querySelector("humidityElement");
   humidityElement.innerHTML = humidityVar;
+  let iconElement = document.querySelector("#icon");
+  let weatherIcon = response.data.weather[0].icon;
+  iconElement.setAttribute(
+    "src",
+    "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png"
+  );
 }
 
 // get current location
