@@ -33,7 +33,7 @@ timeElement.innerHTML = formatDate(currentTime);
 //////////////////////////////////////////////////////////////////////////////////
 
 function displayWeatherCondition(response) {
-  let celsiusTemp = response.data.main.temp;
+  celsiusTemp = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("temperatureElement");
   temperatureElement.innerHTML = celsiusTemp;
   let description = response.data.weather[0].description;
