@@ -64,6 +64,7 @@ body {
   border-color: rgb(69, 73, 83);
   box-shadow: black;
   border: 1px;
+  border-radius: 10pt;
 }
 
 .btn:hover {
@@ -98,7 +99,7 @@ h2 {
 }
 
 ul {
-  font-size: 14pt;
+  font-size: 12pt;
   color: black;
   text-align: left;
   display: block;

@@ -44,10 +44,10 @@ function displayWeatherCondition(response) {
   h1.innerHTML = currentCity;
   console.log(currentCity);
   let windVar = response.data.wind.speed;
-  let windElement = document.querySelector("#windSpeed");
+  let windElement = document.querySelector("windElement");
   windElement.innerHTML = windVar;
   let humidityVar = response.data.main.humidity;
-  let humidityElement = document.querySelector("#humidity");
+  let humidityElement = document.querySelector("humidityElement");
   humidityElement.innerHTML = humidityVar;
   // let rainVar = response.data.main.weather[0].icon;
   // let percipitationElement = document.querySelector("#percipitation");
@@ -103,10 +103,10 @@ function showTemperature(response) {
   h1.innerHTML = currentCity;
   console.log(currentCity);
   let windVar = response.data.wind.speed;
-  let windElement = document.querySelector("#windSpeed");
+  let windElement = document.querySelector("windElement");
   windElement.innerHTML = windVar;
   let humidityVar = response.data.main.humidity;
-  let humidityElement = document.querySelector("#humidity");
+  let humidityElement = document.querySelector("humidityElement");
   humidityElement.innerHTML = humidityVar;
 }
 
