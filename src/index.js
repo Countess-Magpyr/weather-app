@@ -32,7 +32,6 @@ timeElement.innerHTML = formatDate(currentTime);
 //Get results from city search
 
 function displayWeatherCondition(response) {
-  console.log(response);
   let temp = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("temperatureElement");
   temperatureElement.innerHTML = temp;
@@ -71,26 +70,7 @@ function search(event) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-//Temperature(C to F)
-//function convertToFahrenheit(event) {
-//  event.preventDefault();
-//  var temperatureElement = document.querySelector("#temperature");
-//  temperatureElement.innerHTML = 77;
-//}
-
-//function convertToCelsius(event) {
-//  event.preventDefault();
-// var temperatureElement = document.querySelector("#temperature");
-// temperatureElement.innerHTML = 25;
-//}
-
-var searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
-//var fahrenheitLink = document.querySelector("#fahrenheit-link");
-//fahrenheitLink.addEventListener("click", convertToFahrenheit);
-//var celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
+//forecast
 
 // current location
 
@@ -144,3 +124,6 @@ function findPosition(event) {
 
 let button = document.querySelector("button");
 button.addEventListener("click", findPosition);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
