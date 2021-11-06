@@ -129,9 +129,10 @@ li {
   padding-top: 1rem;
 }
 
-.links {
+footer {
   color: black;
-  font-size: larger;
+  font-size: 10pt;
+  width: 400px;
 }
 
 .weather-app {
