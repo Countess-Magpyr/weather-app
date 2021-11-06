@@ -43,6 +43,15 @@ function displayWeatherCondition(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = currentCity;
   console.log(currentCity);
+  let windVar = response.data.wind.speed;
+  let windElement = document.querySelector("#windSpeed");
+  windElement.innerHTML = windVar;
+  let humidityVar = response.data.main.humidity;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = humidityVar;
+  // let rainVar = response.data.main.weather[0].icon;
+  // let percipitationElement = document.querySelector("#percipitation");
+  //percipitationElement.innerHTML = rainVar;
 }
 
 function search(event) {
@@ -93,6 +102,12 @@ function showTemperature(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = currentCity;
   console.log(currentCity);
+  let windVar = response.data.wind.speed;
+  let windElement = document.querySelector("#windSpeed");
+  windElement.innerHTML = windVar;
+  let humidityVar = response.data.main.humidity;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = humidityVar;
 }
 
 // get current location
