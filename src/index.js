@@ -1,3 +1,4 @@
+//Time function
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -62,9 +63,7 @@ function displayWeatherCondition(response) {
   getForecast(response.data.coord);
 }
 
-function search(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+function search(city) {
   let apiKey = "24938515d6364eea8b6bfd1202de9eb1";
   let apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -72,9 +71,15 @@ function search(event) {
     "&appid=" +
     apiKey +
     "&units=metric";
-  console.log(city);
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+//Temp Conversion
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
@@ -90,7 +95,7 @@ function showCelsiusTemp(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
-//
+//Forecast Fill
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -134,14 +139,11 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-//
+// Globals
 let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
-
-//let button = document.querySelector("button");
-//button.addEventListener("click", findPosition);
+form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
@@ -149,4 +151,4 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
-search("Berlin");
+search("Odesa");

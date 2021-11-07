@@ -11,6 +11,7 @@ body {
 
 cityElement {
   padding-left: 10px;
+  text-transform: capitalize;
 }
 .weather-forecast {
   color: cornsilk;
@@ -53,23 +54,6 @@ cityElement {
   border-color: rgb(69, 73, 83);
   box-shadow: black;
   border: 1px;
-}
-
-.currentbtn {
-  display: block;
-  margin: 0 auto;
-  margin-top: 1rem;
-  width: 80%;
-  color: ivory;
-  background: linear-gradient(
-    112.5deg,
-    rgb(95, 10, 135) 11.4%,
-    rgb(164, 80, 139) 60.2%
-  );
-  border-color: rgb(69, 73, 83);
-  box-shadow: black;
-  border: 1px;
-  border-radius: 10pt;
 }
 
 .btn:hover {
@@ -164,4 +148,9 @@ img {
 
 .weather-forcast-temperature {
   text-align: center;
+}
+
+.special {
+  width: 100px;
+  height: 100px;
 }

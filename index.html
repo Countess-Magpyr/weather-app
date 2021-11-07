@@ -52,17 +52,27 @@
         </form>
 
         <div class="currentWeatherbox">
-          <span>
-            <h1 id="currentCity">
+          <div class="row">
+            <div class="col-6">
+              <span>
+                <h1 id="currentCity">
+                  <img
+                    src="https://img.icons8.com/dusk/64/000000/spring.png"
+                  /><cityElement>Düsseldorf</cityElement>
+                </h1>
+              </span>
+              <ul>
+                <li id="timeNow">Friday, 12:00</li>
+                <li><descriptionElement>Clear</descriptionElement></li>
+              </ul>
+            </div>
+            <div class="col-6">
               <img
-                src="https://img.icons8.com/dusk/64/000000/spring.png"
-              /><cityElement>Düsseldorf</cityElement>
-            </h1>
-          </span>
-          <ul>
-            <li id="timeNow">Friday, 12:00</li>
-            <li><descriptionElement>Clear</descriptionElement></li>
-          </ul>
+                src="https://img.icons8.com/pastel-glyph/100/000000/cat--v2.png"
+                class="special"
+              />
+            </div>
+          </div>
 
           <div class="row">
             <div class="col-6">
@@ -82,7 +92,7 @@
               >
             </div>
 
-            <div class="col-5">
+            <div class="col-6">
               <ul>
                 <li>
                   <strong>Humidity:</strong><humidityElement>81</humidityElement
@@ -159,6 +169,7 @@
             Open-source code</a
           >
           by Sugarmouse
+          <a href="https://icons8.com/icon/121371/cat">Cute icons by Icons8</a>
         </footer>
       </div>
     </div>
