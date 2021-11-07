@@ -40,8 +40,8 @@ function displayWeatherCondition(response) {
   let descriptionElement = document.querySelector("descriptionElement");
   descriptionElement.innerHTML = description;
   let currentCity = response.data.name;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = currentCity;
+  let cityElement = document.querySelector("cityElement");
+  cityElement.innerHTML = currentCity;
   let windVar = response.data.wind.speed;
   let windElement = document.querySelector("windElement");
   windElement.innerHTML = windVar;

@@ -30,7 +30,7 @@
       <div class="weather-app">
         <form class="search-form" id="search-form">
           <div class="row">
-            <div class="col-8">
+            <div class="col-9">
               <input
                 type="search"
                 placeholder="Enter city"
@@ -41,7 +41,7 @@
               />
             </div>
 
-            <div class="col-2">
+            <div class="col-3">
               <input
                 type="submit"
                 value="Search"
@@ -52,7 +52,13 @@
         </form>
 
         <div class="currentWeatherbox">
-          <h1 id="currentCity"><cityElement>Düsseldorf</cityElement></h1>
+          <span>
+            <h1 id="currentCity">
+              <img
+                src="https://img.icons8.com/dusk/64/000000/spring.png"
+              /><cityElement>Düsseldorf</cityElement>
+            </h1>
+          </span>
           <ul>
             <li id="timeNow">Friday, 12:00</li>
             <li><descriptionElement>Clear</descriptionElement></li>
@@ -84,47 +90,61 @@
                 </li>
                 <li>
                   <strong>Wind:</strong>
-                  <windElement>3.58</windElement><strong> km/h</strong>
+                  <windElement>3.58</windElement
+                  ><strong> <lowercase>km/h</lowercase></strong>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="daysContainer">
+          <div class="weather-forecast">
             <div class="row">
               <div class="col-2">
-                <p class="Days">
-                  ⛅<br />22°C<br />
-                  Mon
-                </p>
-              </div>
-              <div class="col-2">
-                <p class="Days">
-                  ☀️<br />
-                  20°C<br />
-                  Tue
-                </p>
-              </div>
-              <div class="col-2">
-                <p class="Days">
-                  ⛅ <br />15°C<br />
+                <div class="weather-forcast-date">Mon</div>
+                <img src="https://img.icons8.com/dusk/64/000000/rainbow.png" />
 
-                  Wed
-                </p>
+                <div class="weather-forcast-temperature">
+                  <span class="weather-forcast-temperature-max">20°</span>
+                  <span class="weather-forecast-temperature-min">10°</span>
+                </div>
               </div>
               <div class="col-2">
-                <p class="Days">
-                  🌧 <br />10°C<br />
-
-                  Thu
-                </p>
+                <div class="weather-forcast-date">Mon</div>
+                <img
+                  src="https://img.icons8.com/dusk/64/000000/smiling-sun.png"
+                />
+                <div class="weather-forcast-temperatur">
+                  <span class="weather-forcast-temperature-max">20°</span>
+                  <span class="weather-forecast-temperature-min">10°</span>
+                </div>
               </div>
               <div class="col-2">
-                <p class="Days">
-                  🌧 <br />15°C<br />
-
-                  Fri
-                </p>
+                <div class="weather-forcast-date">Mon</div>
+                <img
+                  src="https://img.icons8.com/dusk/64/000000/snow-storm.png"
+                />
+                <div class="weather-forcast-temperature">
+                  <span class="weather-forcast-temperature-max">20°</span>
+                  <span class="weather-forecast-temperature-min">10°</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="weather-forcast-date">Mon</div>
+                <img
+                  src="https://img.icons8.com/dusk/64/000000/full-moon--v2.png"
+                />
+                <div class="weather-forcast-temperature">
+                  <span class="weather-forcast-temperature-max">20°</span>
+                  <span class="weather-forecast-temperature-min">10°</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="weather-forcast-date">Mon</div>
+                <img src="https://img.icons8.com/dusk/64/000000/tsunami.png" />
+                <div class="weather-forcast-temperature">
+                  <span class="weather-forcast-temperature-max">20°</span>
+                  <span class="weather-forecast-temperature-min">10°</span>
+                </div>
               </div>
             </div>
           </div>
