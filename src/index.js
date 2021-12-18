@@ -72,6 +72,7 @@ function search(city) {
     apiKey +
     "&units=metric";
   axios.get(apiUrl).then(displayWeatherCondition);
+  console.log(apiUrl);
 }
 
 function handleSubmit(event) {
@@ -151,4 +152,4 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
-search("Odesa");
+search("Berlin");

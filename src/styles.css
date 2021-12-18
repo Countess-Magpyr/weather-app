@@ -31,7 +31,13 @@ cityElement {
 }
 
 .col-2 {
+  display: block;
   margin: 0 auto;
+}
+
+.col-6 {
+  display: flex;
+  justify-content: space-around;
 }
 .container {
   margin-top: 1rem;
